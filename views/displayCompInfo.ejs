@@ -1,0 +1,9 @@
+<% if(rs.length > 0) { %>
+Company ID: <%= rs[0].comp_id %><br />
+Minimum GPA: <%= rs[0].min_gpa %><br />
+Maximum GPA: <%= rs[0].max_gpa %><br />
+Average GPA: <%= rs[0].avg_gpa %><br />
+Number of Students: <%= rs[0].num_of_students %><br />
+<% } else { %>
+No Companies matched this company id <%= comp_id %>.
+<% } %>

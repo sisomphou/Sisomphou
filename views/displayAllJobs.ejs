@@ -1,0 +1,16 @@
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>User Name</th><th>Company Name</th><th>Job Description</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><a href="/account/?acc_id=<%= rs[i].acc_id%>"><%= rs[i].f_name %> <%= rs[i].l_name%></a></td>
+            <td><a href="/comp_gpas/?comp_id=<%= rs[i].comp_id%>"><%= rs[i].comp_name %></a></td>
+            <td><%= rs[i].job_desc %></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No Jobs are entered into the UserJobView database table.
+    <% } %>
+</div>
